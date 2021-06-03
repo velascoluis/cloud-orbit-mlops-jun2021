@@ -7,7 +7,7 @@ inputs:
 - {name: dataset,        type: String,                  default: 'None',  description: datasetid}
 
 outputs:
-- {name: AI_dataset_name,        type: InputPathPlaceholder,   description: Dataset URI}
+- {name: AI_dataset_name,        type: Dataset,   description: Dataset URI}
 
 implementation:
   container:
