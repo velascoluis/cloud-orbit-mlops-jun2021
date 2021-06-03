@@ -14,5 +14,6 @@ root
             └── requirements.txt
             
 ```
+![Orbit](notebook/assets/memecrypto.jpeg)
 PRs are welcome!
 
