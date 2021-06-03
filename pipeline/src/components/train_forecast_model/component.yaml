@@ -2,7 +2,7 @@ name: train forecast model
 description: Entrena el modelo de Vertex AI
 
 inputs:
-- {name: AI_dataset_name,    type: InputPathPlaceholder,    default: 'None',  description: Dataset name}
+- {name: AI_dataset_name,    type: Dataset,    default: 'None',  description: Dataset name}
 
 implementation:
   container:
