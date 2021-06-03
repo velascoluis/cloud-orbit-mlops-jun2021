@@ -1,0 +1,13 @@
+name: train forecast model
+description: Entrena el modelo de Vertex AI
+
+inputs:
+- {name: AI_dataset_name,    type: InputPathPlaceholder,    default: 'None',  description: Dataset name}
+
+implementation:
+  container:
+    image: gcr.io/velascoluis-test/train-forecast-model:latest
+    command: ['python3' ,'src/train_forecast_model.py']
+    args: [
+      '--AI_dataset_name',      {inputPath: AI_dataset_name}
+    ]

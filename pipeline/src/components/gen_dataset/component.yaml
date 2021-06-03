@@ -1,0 +1,21 @@
+name: gen dataset
+description: Genera el dataset de VertexAI
+
+inputs:
+- {name: market_list,    type: InputPathPlaceholder,    default: 'None',  description: Listado de monedas}
+- {name: project_id,     type: String,                  default: 'None',  description: prid}
+- {name: dataset,        type: String,                  default: 'None',  description: datasetid}
+
+outputs:
+- {name: AI_dataset_name,        type: InputPathPlaceholder,   description: Dataset URI}
+
+implementation:
+  container:
+    image: gcr.io/velascoluis-test/gen-dataset:latest
+    command: ['python3' ,'src/gen_dataset.py']
+    args: [
+      '--market_list',          {inputPath:  market_list},
+      '--project_id',           {inputValue: project_id},
+      '--dataset',              {inputValue: dataset},
+      '--AI_dataset_name',      {outputPath: AI_dataset_name}
+    ]

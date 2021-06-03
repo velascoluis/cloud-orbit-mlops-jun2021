@@ -1,0 +1,19 @@
+name: crypto ranker
+description: Devuelve lista de mercados con retorno mayor a un umbral en la semana pasada
+
+inputs:
+- {name: exchange,                   type: String,    default: 'coinbase',  description: Nombre del exchange de monedas}
+- {name: benefit_threshold,          type: Integer,   default: 10,          description: Umbral de beneficio}
+
+outputs:
+- {name: market_list,        type: InputPathPlaceholder,   description: Lista de cryptomonedas}
+
+implementation:
+  container:
+    image: gcr.io/velascoluis-test/crypto-ranker:latest
+    command: ['python3' ,'src/crypto_ranker.py']
+    args: [
+        '--exchange',                 {inputValue: exchange},
+        '--benefit_threshold',        {inputValue: benefit_threshold},
+        '--market_list',              {outputPath: market_list}
+    ]

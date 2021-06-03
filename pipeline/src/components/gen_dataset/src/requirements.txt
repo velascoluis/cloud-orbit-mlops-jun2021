@@ -1,0 +1,5 @@
+cryptowatch-sdk
+pandas
+google-cloud-bigquery
+pyarrow
+google-cloud-aiplatform
