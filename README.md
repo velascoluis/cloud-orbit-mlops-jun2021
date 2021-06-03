@@ -15,5 +15,5 @@ root
             
 ```
 ![Orbit](notebook/assets/memecrypto.jpeg)
-PRs are welcome!
+* PRs are welcome!
 
