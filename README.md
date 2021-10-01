@@ -1,4 +1,4 @@
-# Cloud Orbit MLOps demo with Vertex AI Demo - Jun 2021
+# MLOps demo with Vertex AI Demo - Jun 2021
 The code is structured as follows:
 
 ```
